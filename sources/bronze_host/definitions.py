@@ -1,0 +1,48 @@
+# Type: Bronze host
+# Role: HC-12 radio server
+# Microcontroller: ESP32-C3
+# Communications: HC-12 radio client, 
+#                 internal Wifi module
+# Peripheral: LED
+
+### GPIO CONFIGURATION
+NETWORK_LED_PIN = 4
+
+### WIFI
+WIFI_CLIENT_HOSTNAME = "BRONZE-HOST"
+WIFI_NETWORK_NAME = "FARMHOUSE_WIFI_SSID"
+WIFI_NETWORK_PASSWORD = "FARMHOUSE_WIFI_PASSWORD"
+WIFI_CONNECTION_TIMEOUT = 15000
+
+### RADIO HC-12
+SERVER_KEYS  = {
+    2: b"6a7d6b5c-5814-83eb-983f-29b3dc953fde",
+    3: b"e8edcbad-9ec0-4686-aca0-d4d884222757"
+}
+
+RADIO_BAUDRATE = 9600
+RADIO_UART_ID = 1
+RADIO_TX = 21
+RADIO_RX = 20
+RADIO_UART_TIMEOUT_MS = 5000
+RADIO_MY_ID = 1 # server
+RADIO_ALLOWED_DEVICES = [2, 3]
+
+### Telegram
+TELEGRAM_HOST = "api.telegram.org"
+TELEGRAM_BOT_ID = 'bot0000000000:XXX_xXXXXXXXXXXXXXX-XXXXXXXX' #Your Telegram bot
+TELEGRAM_CHAT_ID = '-1001111111112' # Your Telegram channel
+TELEGRAM_UPDATES_TIMEOUT_MS = 30000
+TELEGRAM_NEEDS_REPORT = False
+
+### MQTT Home Assistant
+MQTT_USER = "ha_mqtt_user"
+MQTT_PASSWORD = "hamqttpwd"
+
+MQTT_DEVICES = {
+    2: "camera",
+    3: "pir"
+}
+
+MQTT_UPDATES_TIMEOUT_MS = 10000
+MQTT_NEEDS_REPORT = True

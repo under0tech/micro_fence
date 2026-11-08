@@ -42,6 +42,8 @@ Pinout schema for RP2040 W ([**Guard Host**](/sources/guard_host/))
 
 As shown in the circuit diagram above, the **Raspberry Pi Pico W (RP2040)** is connected to an LED on GPIO13 and to the HC-12 radio module via UART, using GPIO4 for TX and GPIO5 for RX. The device is powered through a USB Type-C connection and also features an onboard **ESP8285 Wi-Fi module** for wireless connectivity.
 
+An analog radio receiver with *Home Assistant* integration is also available. For more details, see [**Bronze Host README.md**](/sources/bronze_host/README.md).
+
 ### Skyfall - PIR Sensor with camera
 An advanced perimeter sensor based on the ESP32-S3 microcontroller. It combines a PIR motion sensor SR501 with a camera OV2640, allowing the node to detect motion and capture photos that then transmittes to the Guard Host via HC-12 module in **secure mode**.
 
